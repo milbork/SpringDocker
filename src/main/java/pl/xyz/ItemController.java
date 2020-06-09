@@ -22,5 +22,11 @@ public class ItemController {
         Item item = itemRepo.findById(id).orElseThrow(RuntimeException::new);
         return item.description;
     }
+    @GetMapping("/hello")
+    @ResponseBody
+    public String hello(){
+
+        return "Hello";
+    }
 
 }
